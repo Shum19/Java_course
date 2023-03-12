@@ -18,5 +18,11 @@ public class MyLib {
             int value = input.nextInt();
             return value;
         }
+        public static String inputString (String message){
+            Scanner input = new Scanner(System.in);
+            System.out.println(message);
+            String text = input.next();
+            return text;
+        }
     }
 

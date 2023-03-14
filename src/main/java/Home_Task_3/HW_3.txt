@@ -1,0 +1,4 @@
+1. Дан список ArrayList<Integer> целых чисел. Удалить из него нечетные числа.
+2. Дан список ArrayList<String>. Удалить из него все строки, которые являются числами
+Пример: ArrayList<String> list = new ArrayList<>(List.of("string", "s", "5", "10", "-12", "my_value"));
+["string", "s", "my_value"]

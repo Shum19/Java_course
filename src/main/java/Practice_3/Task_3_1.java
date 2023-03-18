@@ -25,7 +25,7 @@ public class Task_3_1 {
 //            int j = i+1;
 //            while (j < col.size()){
 //                if (col.get(i).equals(col.get(j))){
-//                    col.remove(j);
+//                    col.remove(j--);
 //                }
 //                j++;
 //            }

@@ -1,0 +1,60 @@
+package Home_Task_4;
+
+import java.io.File;
+import java.util.*;
+
+/** Реализовать консольное приложение, которое:
+    1. Принимает от пользователя строку вида text~num
+    2. Нужно рассплитить строку по ~, сохранить text в связный список на позицию num.
+    4. Если введено print~num, выводит строку из позиции num в связном списке.
+    5. Если введено exit, завершаем программу
+ *Пример:   [string~4, num~3]
+ *          print~3 num
+ * print~4 - > string
+ * my_value~1 -> [my_value~1, string~4, num~3]
+ * print~1 -> my_value
+ */
+public class Home_Task4_1 {
+    public static void main(String[] args) {
+        List<String > list_1 = new ArrayList<>();
+        boolean flag = true;
+        while (flag){
+
+            System.out.print("Choose Option 1 - 4:" +
+                                "\n1. Enter data." +
+                                "\n2. Print data." +
+                                "\n3. Return main menu." +
+                                "\n4. Exit.\n");
+            String input = inputString();
+            switch (input){
+
+                case "1":
+                    while (true){
+                        String txt = inputString();
+                        if (txt == "") break;
+                        String [] arr = txt.split("~");
+                        int position = Integer.parseInt(arr[1]);
+                        list_1.set(position, Arrays.toString(arr));
+                    }
+                    System.out.println(list_1);
+                    System.out.println("opt 1");
+                    break;
+                case "2":
+                    System.out.println(list_1);
+                    System.out.println("opt 2");
+                    break;
+                case "3":
+                    break;
+                case "4":
+                    flag = false;
+                    break;
+            }
+
+        }
+    }
+    public static String inputString () {
+        Scanner input = new Scanner(System.in);
+        String text = input.nextLine();
+        return text;
+    }
+}

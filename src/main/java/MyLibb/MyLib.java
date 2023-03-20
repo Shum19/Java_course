@@ -6,6 +6,7 @@ public class MyLib {
 //     Change space char for underline char
         public static String  Underline(String text){
         String newText = text.replace(' ', '_');
+        newText = newText.replaceAll(":", "");
         return newText;
         }
 //        Clear console

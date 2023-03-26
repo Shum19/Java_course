@@ -19,15 +19,19 @@ public class Main {
         System.out.println("Table_1");
         Person.printTable(prsnList);
         System.out.println("-".repeat(57));
+
         System.out.println("Table_2");
         Person.showPersonAbove(prsnList, 20);
         System.out.println("-".repeat(57));
+
         System.out.println("Table_3");
         Person.showMaleOnly(prsnList);
         System.out.println("-".repeat(57));
+
         System.out.println("Table_4");
         Person.groupGender(prsnList, "female");
         System.out.println("-".repeat(57));
+
         System.out.println("Table_5");
         Person.printTable(Person.ageSorted(prsnList));
 
